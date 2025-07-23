@@ -1,6 +1,6 @@
-# CS3_1stQtrPortfolio_Mendoza
+# CS3_1stQtrPortfolio_Balares
 
-![Portfolio](https://wiztoonz.com/wp-content/uploads/2022/04/Blog-Post-Portfolio.jpg)
+
 
 ## Instructions to create your CS3_1st Qtr Portfolio
 1. Make a copy of this repository to your computer and your github account.  This repository will be used to contain all your graded and non-graded exercises to create your CS3 first quarter portfolio.  
