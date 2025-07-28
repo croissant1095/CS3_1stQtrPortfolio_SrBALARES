@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Q1 1st Non-Graded</title>
+    </head>
+    
+    <body>
+        <p id="dialogue"></p><br>
+
+        <script>
+            let snack = "potato chips";
+            let container = "small pack";
+            let myAge = 14;
+            const MAXAGE = 100;
+            let numPerDay = 1;
+            let totalRequired = (numPerDay*365) * (MAXAGE - myAge);
+            let message = "You will need " + totalRequired + " " + container + "s of " + snack + " to last you until the ripe old age of " + MAXAGE;
+            let pageDialogue = document.getElementById("dialogue");
+            pageDialogue.innerHTML = message;
+        </script>
+    </body>
+</html>
