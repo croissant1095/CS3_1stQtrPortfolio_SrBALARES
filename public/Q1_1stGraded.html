@@ -13,15 +13,17 @@
     <p>Looks like you clicked on the link!</p>
     <br>
     <p>How about you press this button?</p>
-    <button>Click Me!</button><br>
-    <p id="p" onclick="displayMessage()"></p>
+    <button onclick="displayMessage()">Click Me!</button><br>
 
     <script>
       function displayMessage() {
-        let guy = document.getElementById("p");
-        guy.innerHTML = "You won 10000 Pesos";
+        document.getElementById("p").innerHTML = "Hi World!"
       }
     </script>
+
+    <p id="p"></p>
+
+    
 
     
 
