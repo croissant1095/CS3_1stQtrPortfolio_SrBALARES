@@ -11,6 +11,15 @@
     <br>
     <p>How about you press this button?</p>
     <button>Click Me!</button>
+    <p id="prop" onclick="displayMessage()"></p>
+
+    <script>
+      function displayMessage() {
+        document.getElementById("prop").innerHTML = "You won 10000 Pesos!";
+        alert("You won a brand new car!");
+        alert("Nothing beats a Jet2 Holiday!");
+      }
+    </script>
 
   </body>
 
