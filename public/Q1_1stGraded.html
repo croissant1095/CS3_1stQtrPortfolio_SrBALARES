@@ -6,14 +6,7 @@
 
   <body>
 
-    <script>
-      function displayMessage() {
-        let guy = document.getElementById("prop");
-        guy.innerHTML = "You won 10000 Pesos";
-        alert("You won a brand new car!");
-        alert("Nothing beats a Jet2 Holiday!");
-      }
-    </script>
+    
     
     <p>By: Ryan Gavin Balares</p>
     <p>Hello there!</p>
@@ -21,7 +14,15 @@
     <br>
     <p>How about you press this button?</p>
     <button>Click Me!</button>
-    <p id="prop" onclick="displayMessage()"></p>
+    <p id="p" onclick="displayMessage()"></p>
+
+    <script>
+      function displayMessage() {
+        let guy = document.getElementById("p");
+        guy.innerHTML = "You won 10000 Pesos";
+        alert("You won a brand new car!");
+      }
+    </script>
 
     
 
@@ -33,7 +34,3 @@
 
 
 
-<script>
-  
-  
-</script>
