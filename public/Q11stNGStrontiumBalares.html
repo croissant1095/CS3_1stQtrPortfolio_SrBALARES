@@ -5,18 +5,25 @@
     </head>
     
     <body>
-        <p id="dialogue"></p><br>
+
+        <p id="studentDialogue"></p><br>
+        <p id="sirDialogue"></p>
 
         <script>
             let snack = "potato chips";
             let container = "small pack";
             let myAge = 14;
-            const MAXAGE = 100;
+            let sirAge = 40;
+            const MAXAGE = 120;
             let numPerDay = 1;
-            let totalRequired = (numPerDay*365) * (MAXAGE - myAge);
-            let message = "You will need " + totalRequired + " " + container + "s of " + snack + " to last you until the ripe old age of " + MAXAGE;
-            let pageDialogue = document.getElementById("dialogue");
-            pageDialogue.innerHTML = message;
+            let totalRequiredStudent = (numPerDay*365) * (MAXAGE - myAge);
+            let totalRequiredSir = (numPerDay*365) * (MAXAGE - sirAge);
+            let studentMessage = "A student will need " + totalRequiredStudent + " " + container + "s of " + snack + " to last you until the ripe old age of" + MAXAGE;
+            let sirMessage = "Sir Roy will need " + totalRequiredSir + " " + container + "s of " + snack + " to last him until the ripe old age of " + MAXAGE;
+            let pageDialogue = document.getElementById("studentDialogue");
+            pageDialogue.innerHTML = studentMessage;
+            let pageDialogue2 = document.getElementById("sirDialogue");
+            pageDialogue2.innerHTML = sirMessage;
         </script>
     </body>
 </html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Q1-G2-Sr-Balares</title>
+  </head>
+
+    <body>
+    <h2>Q1-G2-Strontium-Balares</h2>
+    <br>
+    <p>Who are your friends?!</p>
+
+    <input id="fr1" placeholder="Michael"><br>
+    <input id="fr2" placeholder="Luis"><br>
+    <input id="fr3" placeholder="Tom"><br>
+    <input id="fr4" placeholder="Scott"><br>
+    <input id="fr5" placeholder="Harold"><br><br>
+
+    <button onclick="printFriends()">See your Friends!</button>
+
+    <div id="out1"></div>
+    
+    <br><br>
+    <p>Describe your friends with three adjectives!</p>
+
+    <input id="inp1" placeholder="Amazing"><br>
+    <input id="inp2" placeholder="Smart"><br>
+    <input id="inp3" placeholder="Kind"><br><br>
+
+    <button onclick="printDescription()">See your Friendly Message!</button>
+
+    <div id="out"></div>
+
+    <script>
+        function printFriends() {
+            out1.innerHTML = "";
+            out1.innerHTML += "My friends are:" + "<br>";
+            out1.innerHTML += fr1.value + "<br>";
+            out1.innerHTML += fr2.value + "<br>";
+            out1.innerHTML += fr3.value + "<br>";
+            out1.innerHTML += fr4.value + "<br>";
+            out1.innerHTML += fr5.value + "<br>";
+        }
+        function printDescription() {
+           out.innerHTML = "";
+           out.innerHTML += "My friends are:" + "<br>";
+           out.innerHTML += inp1.value + "<br>";
+           out.innerHTML += inp2.value + "<br>";
+           out.innerHTML += inp3.value + "<br>";
+        }
+    </script>
+  </body>
+</html>
