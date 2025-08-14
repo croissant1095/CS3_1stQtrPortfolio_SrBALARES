@@ -2,36 +2,72 @@
 <html>
     <head>
         <title>Q1 3rd Graded Exercise</title>
+        <style>
+            #main {
+                line-height: 1.7;
+            }
+            #menuPrice {
+                height: 17px;
+            }
+            #tip {
+                height: 17px;
+            }
+            #service {
+                height: 17px;
+            }
+            #discount {
+                height: 17px;
+            }
+            #totalButton {
+                margin-top: 3px;
+            }
+
+            
+        </style>
     </head>
 
     <body>
-        <h1>Q1 Graded Exercise submitted by Ryan Gavin Balares of 9-Strontium</h1>
-        <br>
-        <label for="menuPrice">Menu Price: </label>
+        <div id="main">
+        <h1>Q1 3rd Graded Exercise submitted by Ryan Gavin Balares of 9-Strontium</h1>
+
+        <label id="menuId" for="menuPrice">Menu Price: </label>
         <input id="menuPrice" placeholder="69420" type="number"><br>
-        <label for="tip">Tip: </label>
+        <label id="tipId" for="tip">Tip: </label>
         <input id="tip" placeholder="69" type="number"><br>
         <label for="service">Service Charge: </label>
-        <input id="service" placeholder="420" type="number"><br>
-        <button onclick="calculateTotal()">See Total Price!</button>
+        <input id="service" placeholder="40%" type="number"><br>
+        <label for="discount">Discount: </label>
+        <input id="discount" placeholder="1%" type="number"><br>
+        <button id="totalButton" onclick="calculateTotal()">See Total Price!</button>
+        </div>
+
         <div id="total"></div>
-
-
+        
         <script>
+           
+            
             function calculateTotal() {
                 let menuPrice = parseFloat(document.getElementById("menuPrice").value);
                 let tip = parseFloat(document.getElementById("tip").value);
                 let service = parseFloat(document.getElementById("service").value);
-                let total = (menuPrice + tip) + (menuPrice * (service / 100));
+                let discount = parseFloat(document.getElementById("discount").value);
+                let total = (menuPrice + tip) + (menuPrice * (service / 100)) - (menuPrice*(discount / 100));
                 let totalMessage = document.getElementById("total");
                 totalMessage.innerHTML = "";
+                
 
                 if ((total - Math.floor(total)) == 0) {
                     totalMessage.innerHTML = "Total: Php " + total + ".00";
                 }
+                else if (Number.isNaN(total) == true) {
+                    totalMessage.innerHTML = "Total: Php 0.00" + "<br>";
+                    totalMessage.innerHTML += "Please check if you have filled out all boxes." + "<br>";
+                    totalMessage.innerHTML += "If you intentionally put everything blank, then... :)";
+                }
                 else{
                     totalMessage.innerHTML = "Total: Php " + total;
                 }
+                console.log("hi sir roy!!!!");
                 
             }
         </script>
