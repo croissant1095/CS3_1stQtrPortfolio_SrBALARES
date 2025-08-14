@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+   <h2> Q1 3rd Graded Exercise submitted by Ryan Gavin Balares of 9-Strontium</h2>
+   <p>Guess the Number: ****</p>
+   <p>The number is from 1 to 100.</p>
+   <label for="guess">Enter your guess: </label>
+   <input type="number" id="guess"><br><br>
+   <button id="checkButton">Check It!</button><br><br>
+   <div id="result">Result: </div>
+
+    <script>
+       const buttonDetector = document.getElementById("checkButton");
+       var resultContent = document.getElementById("result");
+       buttonDetector.addEventListener('click', checkIt);
+       var num = Math.floor(Math.random() * 100) + 1; 
+       resultContent.innerHTML = "Result: ";
+       function checkIt() {
+              let guess = document.getElementById("guess").value;
+            
+              if (guess == num) {
+                resultContent.innerHTML = "Result: Correct!" + "<br>";
+                resultContent.innerHTML += "Try another number by refreshing the page!";
+                console.log("Hi Sir!")
+              }
+              else if (num > guess) {
+                resultContent.innerHTML = "Result: Higher";
+              }
+              else {
+                resultContent.innerHTML = "Result: Lower";
+              }
+
+             
+         
+        }
+    </script>
+
+</body>
+
+</html>
