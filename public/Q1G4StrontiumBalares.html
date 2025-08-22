@@ -16,10 +16,19 @@
        buttonDetector.addEventListener('click', checkIt);
        var num = Math.floor(Math.random() * 100) + 1; 
        resultContent.innerHTML = "Result: ";
+
        function checkIt() {
-              let guess = document.getElementById("guess").value;
+              
+              let guess = parseFloat(document.getElementById("guess").value);
+              console.log(guess);
             
-              if (guess == num) {
+              if (Number.isNaN(guess) == true) {
+                resultContent.innerHTML = "Please enter a number from 1-100.";
+              }
+              else if (guess < 0 || guess > 100) {
+                resultContent.innerHTML = "Please enter a number from 1-100.";
+              }
+              else if (guess == num) {
                 resultContent.innerHTML = "Result: Correct!" + "<br>";
                 resultContent.innerHTML += "Try another number by refreshing the page!";
                 console.log("Hi Sir!")
@@ -27,12 +36,12 @@
               else if (num > guess) {
                 resultContent.innerHTML = "Result: Higher";
               }
-              else {
+              else if (num < guess) {
                 resultContent.innerHTML = "Result: Lower";
               }
+              
 
-             
-         
+          
         }
     </script>
 
