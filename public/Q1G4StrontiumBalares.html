@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Q1 4th Graded: Guessing Game</title>
+    </head>
+    <body>
+        <h2>Q1 4th Graded Exercise submitted by Ryan Gavin Balares of 9-Strontium</h2>
+        <p>Guess the number: ****</p>
+        <p>The number is from 1 to 100.</p>
+        <label for="guess">Enter your guess: </label>
+        <input id="guess"><br><br>
+        <button onclick="checkIt()">Check It!</button><br><br>
+        <div id="result">Result: </div>
+
+        <script>
+            let num = Math.floor(Math.random() * 100) + 1;
+
+            function checkIt() {
+                let guess = parseFloat(document.getElementById("guess").value);
+                
+                if (num == guess) {
+                    
+                }
+            }
+        </script>
+    </body>
+</html>
