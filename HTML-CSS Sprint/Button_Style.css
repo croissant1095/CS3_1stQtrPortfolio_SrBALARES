@@ -1,0 +1,20 @@
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: white;
+    font-style: italic;
+    font-size: large;
+    color:darkblue;
+    border-color: darkgray;
+  }
+
+
+#header2 {
+    margin-bottom: 3px;
+}
+#break {
+    margin-top: 6px;
+    margin-bottom: 8px;
+}
